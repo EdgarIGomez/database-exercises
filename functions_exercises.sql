@@ -28,3 +28,14 @@ SELECT * FROM titles WHERE title = 'Senior Engineer' ORDER BY from_date, emp_no;
 SELECT from_date, COUNT(from_date) FROM titles WHERE title = 'Staff' GROUP BY from_date ORDER BY COUNT(from_date) DESC;
 
 SELECT emp_no FROM titles WHERE title = 'Engineer' ORDER BY emp_no DESC;
+
+SELECT first_name, last_name, hire_date FROM employees WHERE gender = 'F' ORDER BY hire_date DESC LIMIT 10;
+
+SELECT birth_date, COUNT(birth_date) FROM employees GROUP BY birth_date ORDER BY COUNT(birth_date) DESC;
+
+SELECT gender, birth_date, COUNT(birth_date) FROM employees GROUP BY birth_date, gender ORDER BY COUNT(birth_date) DESC;
+
+SELECT hire_date, COUNT(hire_date) FROM employees GROUP BY hire_date ORDER BY COUNT(hire_date) DESC;
+
+SELECT * FROM employees WHERE birth_date = '1952-3-8' ORDER By LENGTH(last_name) DESC LIMIT 10;
+
